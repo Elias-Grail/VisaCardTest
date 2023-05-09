@@ -18,7 +18,6 @@ public class positiveTest {
     static void setupAll() {
 
         WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "drivers/win/chromedriver.exe");
 
     }
 
@@ -44,7 +43,6 @@ public class positiveTest {
     @Test
     void fillingOutTheFormMan() {
 
-        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Есенин Сергей");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79997777777");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -58,7 +56,6 @@ public class positiveTest {
     @Test
     void fillingOutTheFormWoman() {
 
-        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Ахматова Анна");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79995555555");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
