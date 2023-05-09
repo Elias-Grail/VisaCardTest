@@ -1,3 +1,6 @@
+package ru.netology;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,12 +12,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class positiveTest {
-
     private WebDriver driver;
 
     @BeforeAll
     static void setupAll() {
 
+        WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.driver", "drivers/win/chromedriver.exe");
 
     }
@@ -28,6 +31,7 @@ public class positiveTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999/");
 
     }
 
