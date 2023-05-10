@@ -43,7 +43,7 @@ build/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.bin/
+bin/
 .idea
 *.iws
 *.iml
